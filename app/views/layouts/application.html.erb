@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DentakuWebapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <!-- ヘッダーロゴ --> 
+    <div class = "header-logo">
+      <%= link_to("電卓ウェブアプリ","/") %>
+    </div>
+
+    <!-- ヘッダーメニュー --> 
+    <div class = "header-menus">
+      <ul>
+        <li><%= link_to("壱","/") %>
+        <li><%= link_to("弐","/2") %>
+        <li><%= link_to("コントローラー","/controller") %>
+        <li><%= link_to("結果","/result") %>
+      <ul>
+    </div>
+    
+    <!-- flash --> 
+    <% if flash[:notice] != nil %>
+      <div class = "flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

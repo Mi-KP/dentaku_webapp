@@ -1,0 +1,13 @@
+<div class = "main select_2">
+    <div class = "container">
+        <p>2つ目の数字を入力してください</p>
+        <%= form_tag("/controller") do %>
+        <div class="s_form">
+            <input name="second_number">
+            <input type="submit" value="送信">
+        </div>
+        <% end %>
+
+        <%= "1つ目に入力した数字は#{@first_number.first_number}です" %>
+    </div>
+</div>
